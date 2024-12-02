@@ -5,7 +5,8 @@
         rofi-wayland
         swaynotificationcenter
         waybar
-	    lxqt.lxqt-policykit
+	    #lxqt.lxqt-policykit
+        hyprpolkitagent
         pavucontrol
         hyprland
     ];
@@ -51,7 +52,8 @@
                 exec-once = [
                     "swaync"
                     "sh ~/.config/waybar/launch.sh"
-                    "lxqt-policykit-agent"
+                    #"lxqt-policykit-agent"
+                    "exec-once = systemctl --user start hyprpolkitagent"
                 ];
                 windowrulev2 = [
                     "monitor DP-3,class:.*"
