@@ -53,7 +53,7 @@
                     "swaync"
                     "sh ~/.config/waybar/launch.sh"
                     #"lxqt-policykit-agent"
-                    "exec-once = systemctl --user start hyprpolkitagent"
+                    "systemctl --user start hyprpolkitagent"
                 ];
                 windowrulev2 = [
                     "monitor DP-3,class:.*"
