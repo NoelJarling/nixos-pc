@@ -313,8 +313,6 @@
                     text-color: inherit;
                 }
 
-                @import "rounded-common.rasi"
-
                 element selected {
                     text-color: @bg1;
                 }'';
