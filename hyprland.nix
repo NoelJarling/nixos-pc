@@ -5,7 +5,6 @@
         rofi-wayland
         swaynotificationcenter
         waybar
-	    #lxqt.lxqt-policykit
         hyprpolkitagent
         pavucontrol
         hyprland
@@ -52,7 +51,6 @@
                 exec-once = [
                     "swaync"
                     "sh ~/.config/waybar/launch.sh"
-                    #"lxqt-policykit-agent"
                     "systemctl --user start hyprpolkitagent"
                 ];
                 windowrulev2 = [
@@ -60,6 +58,7 @@
                     "monitor DP-2,class:(steam)"
                     "monitor DP-2,class:(firefox)"
                     "monitor DP-2,class:(Rofi)"
+                    "tile,title:(Hyprland Polkit Agent)"
                     "suppressevent maximize, class:.*"
                 ];
                 workspace = [
