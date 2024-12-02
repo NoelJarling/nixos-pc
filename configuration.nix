@@ -152,6 +152,13 @@
         };
       };
     };
+    programs.zsh = {
+      enable = true;
+      autosuggestion = {
+        enable = true;
+        #highlight = "fg=#ff00ff,bg=cyan,bold,underline";
+      };
+    };
     home.file.p10k_config = {
       source = ./p10k/p10k.zsh;
       target = "./.p10k.zsh";
