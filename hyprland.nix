@@ -317,8 +317,7 @@
 
                 element selected {
                     text-color: @bg1;
-                }
-            '';
+                }'';
         };
     };
 }
