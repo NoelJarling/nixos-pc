@@ -31,7 +31,7 @@
             enable = true;
             settings = {
                 "$mainMod" = "SUPER";
-                "bind" = [
+                bind = [
                     "$mainMod, BackSpace, exec, alacritty"
                     "$mainMod, C, killactive,"
                     "$mainMod, F, fullscreen, 0"
@@ -48,61 +48,62 @@
                     "$mainMod ALT, i, movewindow, u"
                     "$mainMod ALT, k, movewindow, d"
                 ];
-                "exec-once" = [
+                exec-once = [
                     "swaync"
                     "sh ~/.config/waybar/launch.sh"
                     "lxqt-policykit-agent"
                 ];
-                "windowrulev2" = [
+                windowrulev2 = [
                     "monitor DP-2,class:(steam)"
-                    "monitor DP-3,class:(firefox)"
+                    "monitor DP-2,class:(firefox)"
+                    "monitor DP-2,class:(Rofi)"
                     "monitor DP-3,class:.*"
                     "suppressevent maximize, class:.*"
                 ];
-                "workspace" = [
+                workspace = [
                     "2, persistent:true,monitor:DP-2,default:true,layoutopt:orientation:left"
                     "1, persistent:true,monitor:DP-3,default:true,layoutopt:orientation:right"
                 ];
-                "general" = {
-                    "gaps_in" = 5;
-                    "gaps_out" = 10;
-                    "border_size" = 2;
+                general = {
+                    gaps_in = 5;
+                    gaps_out = 10;
+                    border_size = 2;
                     "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
                     "col.inactive_border" = "rgba(595959aa)";
-                    "resize_on_border" = false;
-                    "allow_tearing" = true;
-                    "layout" = "master";
+                    resize_on_border = false;
+                    allow_tearing = true;
+                    layout = "master";
                 };
-                "master" = {
-                    "new_status" = "slave";
-                    "mfact" = 0.66;
-                    "orientation" = "left";
+                master = {
+                    new_status = "master";
+                    mfact = 0.66;
+                    orientation = "left";
                 };
-                "input" = {
-                    "kb_layout" = "de";
-                    "follow_mouse" = 1;
-                    "sensitivity" = "-0.8";
+                input = {
+                    kb_layout = "de";
+                    follow_mouse = 1;
+                    sensitivity = "-0.8";
                 };
-                "decoration" = {
-                    "rounding" = 10;
-                    "active_opacity" = 1.0;
-                    "inactive_opacity" = 1.0;
+                decoration = {
+                    rounding = 10;
+                    active_opacity = 1.0;
+                    inactive_opacity = 1.0;
                     shadow = {
                         range = 4;
                         render_power = 3;
                         color = "rgba(1a1a1aee)";
                     };
-                    "blur" = {
-                        "enabled" = true;
-                        "size" = 3;
-                        "passes" = 1;
-                        "vibrancy" = 0.1696;
+                    blur = {
+                        enabled = true;
+                        size = 3;
+                        passes = 1;
+                        vibrancy = 0.1696;
                     };
                 };
-                "animations" = {
-                    "enabled" = true;
-                    "bezier" = "myBezier, 0.05, 0.9, 0.1, 1.05";
-                    "animation" = [
+                animations = {
+                    enabled = true;
+                    bezier = "myBezier, 0.05, 0.9, 0.1, 1.05";
+                    animation = [
                         "windows, 1, 7, myBezier"
                         "windowsOut, 1, 7, default, popin 80%"
                         "border, 1, 10, default"
@@ -111,16 +112,16 @@
                         "workspaces, 1, 6, default"
                     ];
                 };
-                "misc" = {
-                    "force_default_wallpaper" = 1;
-                    "disable_hyprland_logo" = false;
+                misc = {
+                    force_default_wallpaper = 1;
+                    disable_hyprland_logo = false;
                 };
-                "monitor" = [
+                monitor = [
                     "DP-2, 2560x1440,1920x0, 1"
                     "DP-3,1920x1080, 0x200, 1"
                     "HDMI-A-1, disable"
                 ];
-                "env" = [
+                env = [
                     "XCURSOR_SIZE,24"
                     "HYPRCURSOR_SIZE,24"
                 ];
