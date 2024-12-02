@@ -214,7 +214,7 @@
         };
         programs.rofi = {
             enable = true;
-            theme = ''
+            theme = builtins.toFile "rofi-theme.rasi" ''
                 /* ROUNDED THEME FOR ROFI */
                 /* Author: Newman Sanchez (https://github.com/newmanls) */
                 * {
