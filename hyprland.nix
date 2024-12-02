@@ -7,7 +7,6 @@
         waybar
 	    lxqt.lxqt-policykit
         pavucontrol
-        kanshi
         hyprland
     ];
     fonts.packages = with pkgs; [
@@ -28,25 +27,6 @@
     xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
 
     home-manager.users.noel = { pkgs, ... }: {
-        /*services.kanshi = {
-            enable = true;
-            settings = [
-                {
-                    profile.name = "main";
-                    profile.outputs = [
-                        {
-                            criteria = "DP-2";
-                        }
-                        {
-                            criteria = "DP-3";
-                        }
-                        {
-                            criteria = "*";
-                        }
-                    ];
-                }
-            ];
-        };*/
         wayland.windowManager.hyprland = {
             enable = true;
             settings = {
