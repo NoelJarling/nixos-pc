@@ -54,10 +54,10 @@
                     "lxqt-policykit-agent"
                 ];
                 windowrulev2 = [
+                    "monitor DP-3,class:.*"
                     "monitor DP-2,class:(steam)"
                     "monitor DP-2,class:(firefox)"
                     "monitor DP-2,class:(Rofi)"
-                    "monitor DP-3,class:.*"
                     "suppressevent maximize, class:.*"
                 ];
                 workspace = [
