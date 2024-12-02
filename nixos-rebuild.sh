@@ -4,9 +4,6 @@ set -e # Exit on non-zero status
 # cd into config dir
 pushd /etc/nixos
 
-# Shows your changes
-git diff -U0
-
 echo "NixOS Rebuilding..."
 
 # Rebuild, output simplified errors, log trackebacks
