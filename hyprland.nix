@@ -37,6 +37,7 @@
                     "$mainMod, F, fullscreen, 0"
                     "$mainMod, E, exec, nautilus"
                     "$mainMod, V, layoutmsg, swapwithmaster"
+                    "$mainMod, Q, settiled,"
                     "$mainMod, SPACE, exec, rofi -show drun -show-icons"
                     "$mainMod, M, exec, sh ~/.config/waybar/launch.sh"
                     "$mainMod, j, movefocus, l"
