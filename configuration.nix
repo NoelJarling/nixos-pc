@@ -119,8 +119,7 @@
     Host server
     HostName 10.213.186.204
     User noel
-    IdentityFile ~/.ssh/nixos-server
-    '';
+    IdentityFile ~/.ssh/nixos-server'';
     home.stateVersion = "24.05";
   };
 
