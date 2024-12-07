@@ -60,7 +60,7 @@
                     #"monitor DP-2,class:(steam)"
                     "monitor DP-2,class:(firefox)"
                     "monitor DP-2,class:(Rofi)"
-                    #"suppressevent maximize, class:.*"
+                    "suppressevent maximize, class:.*"
                 ];
                 workspace = [
                     "2, persistent:true,monitor:DP-2,default:true,layoutopt:orientation:left"
