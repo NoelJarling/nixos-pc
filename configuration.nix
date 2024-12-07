@@ -115,11 +115,16 @@
           safe.directory = "/etc/nixos";
       };
     };
-    programs.ssh.extraConfig = ''
-    Host server
-    HostName 10.213.186.204
-    User noel
-    IdentityFile ~/.ssh/nixos-server'';
+    programs.ssh = {
+      enable = true;
+      matchBlocks = {
+        server = {
+          hostname = "10.213.186.204";
+          user = "noel";
+          identityFile = "~/.ssh/nixos-server";
+        };
+      };
+    };
     home.stateVersion = "24.05";
   };
 
