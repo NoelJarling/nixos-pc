@@ -60,6 +60,8 @@
                     #"monitor DP-2,class:(steam)"
                     "monitor DP-2,class:(firefox)"
                     "monitor DP-2,class:(Rofi)"
+                    "monitor DP-3,class:(War Thunder (Vulkan, 64bit))"
+                    "fullscreen,class:(War Thunder (Vulkan, 64bit))"
                     "suppressevent maximize, class:.*"
                 ];
                 workspace = [

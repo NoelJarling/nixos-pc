@@ -65,13 +65,6 @@
       xkb.layout = "de";
       xkb.variant = "";
       videoDrivers = ["nvidia"]; # Load nvidia driver for Xorg and Wayland
-      xrandrHeads = [
-        "DP-3"
-        {
-          output = "DP-2";
-          primary = true;
-        }
-      ];
     };
     getty.autologinUser = "noel";
     displayManager.autoLogin.user = "noel";
