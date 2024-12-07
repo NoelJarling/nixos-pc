@@ -96,8 +96,8 @@
       };
     };
     home.shellAliases = {
-      "rebuild-nix" = "bash /etc/nixos/nixos-rebuild.sh";
-      "push-nix" = "bash /etc/nixos/nixos-push.sh";
+      "rebuild-nix"="bash /etc/nixos/nixos-rebuild.sh";
+      "push-nix"="bash /etc/nixos/nixos-push.sh";
     };
     programs.zsh = {
       enable = true;
