@@ -56,11 +56,10 @@
                     "systemctl --user start hyprpolkitagent"
                 ];
                 windowrulev2 = [
-                    "monitor DP-3,class:.*"
-                    "monitor DP-2,class:(steam)"
+                    #"monitor DP-3,class:.*"
+                    #"monitor DP-2,class:(steam)"
                     "monitor DP-2,class:(firefox)"
                     "monitor DP-2,class:(Rofi)"
-                    "tile,title:(Hyprland Polkit Agent)"
                     "suppressevent maximize, class:.*"
                 ];
                 workspace = [
