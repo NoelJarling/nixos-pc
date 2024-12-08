@@ -173,6 +173,7 @@
     easyeffects # Audio Input Processing
     alacritty # Terminal
     nautilus # File Manager
+    dolphin
     meslo-lgs-nf # powerlevel10k font
     zsh-powerlevel10k # zsh theme
     winetricks
