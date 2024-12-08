@@ -138,7 +138,7 @@
     fsType = "cifs";
     options = let
       # this line prevents hanging on network split
-      automount_opts = "x-systemd.automount,noauto,x-systemd.idle-timeout=60,x-systemd.device-timeout=5s,x-systemd.mount-timeout=5s,user,users";
+      automount_opts = "x-gvfs-hide,x-systemd.automount,noauto,x-systemd.idle-timeout=60,x-systemd.device-timeout=5s,x-systemd.mount-timeout=5s,user,users";
 
     in ["${automount_opts},credentials=/etc/nixos/secrets/smb-secrets,uid=1000,gid=100"];
   };
@@ -173,9 +173,6 @@
     easyeffects # Audio Input Processing
     alacritty # Terminal
     nautilus # File Manager
-    dolphin
-    kdePackages.qtwayland
-    kdePackages.qtsvg
     meslo-lgs-nf # powerlevel10k font
     zsh-powerlevel10k # zsh theme
     winetricks
