@@ -11,6 +11,8 @@
     ./hyprland.nix
     inputs.home-manager.nixosModules.default
   ];  
+
+  systemd.watchdog.runtimeTime = "60s";
   
   # Nvidia
   hardware.graphics.enable = true;
