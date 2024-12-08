@@ -60,7 +60,7 @@
                     #"monitor DP-2,class:(steam)"
                     "monitor DP-2,class:(firefox)"
                     "monitor DP-2,class:(Rofi)"
-                    "monitor DP-3,class:(War Thunder \(Vulkan, 64bit\))"
+                    "monitor DP-3,class:War Thunder \(Vulkan, 64bit\)"
                     "fullscreen,class:(War Thunder \(Vulkan, 64bit\))"
                     "suppressevent maximize, class:.*"
                 ];
@@ -128,6 +128,8 @@
                 env = [
                     "XCURSOR_SIZE,24"
                     "HYPRCURSOR_SIZE,24"
+                    "QT_QPA_PLATFORM,wayland"
+                    "QT_QPA_PLATFORMTHEME,qt5ct"
                 ];
             };
         };

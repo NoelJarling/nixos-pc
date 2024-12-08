@@ -174,6 +174,8 @@
     alacritty # Terminal
     nautilus # File Manager
     dolphin
+    kdePackages.qtwayland
+    kdePackages.qtsvg
     meslo-lgs-nf # powerlevel10k font
     zsh-powerlevel10k # zsh theme
     winetricks
