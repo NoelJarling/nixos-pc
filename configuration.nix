@@ -35,9 +35,14 @@
     kernelParams = [ "nvidia-drm.fbdev=1" ];
     loader.systemd-boot.enable = true;
     loader.efi.canTouchEfiVariables = true;
+    extraModprobeConfig = ''
+      i2c-i801
+      i2c-smbus
+      iTCO-wdt heartbeat="60"
+    '';
   };
 
-  networking.hostName = "nixos"; # Define your hostname.
+  networking.hostName = "nixos-pc"; # Define your hostname.
 
   # Enable networking
   networking.networkmanager.enable = true;
