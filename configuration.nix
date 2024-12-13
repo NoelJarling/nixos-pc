@@ -11,8 +11,6 @@
     ./hyprland.nix
     inputs.home-manager.nixosModules.default
   ];  
-
-  systemd.watchdog.runtimeTime = "60s";
   
   # Nvidia
   hardware.graphics.enable = true;
@@ -35,11 +33,6 @@
     kernelParams = [ "nvidia-drm.fbdev=1" ];
     loader.systemd-boot.enable = true;
     loader.efi.canTouchEfiVariables = true;
-    extraModprobeConfig = ''
-      i2c-i801
-      i2c-smbus
-      iTCO-wdt heartbeat="60"
-    '';
   };
 
   networking.hostName = "nixos-pc"; # Define your hostname.
