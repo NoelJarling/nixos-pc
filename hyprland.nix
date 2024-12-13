@@ -49,7 +49,8 @@
                     "$mainMod ALT, l, movewindow, r"
                     "$mainMod ALT, i, movewindow, u"
                     "$mainMod ALT, k, movewindow, d"
-                    ", code:123, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+                    ", code:123, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
+                    ", code:122, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
                 ];
                 exec-once = [
                     "swaync"
