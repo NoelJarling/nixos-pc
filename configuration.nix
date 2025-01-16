@@ -29,6 +29,7 @@
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;
   hardware.xone.enable = true;
+  hardware.usb-modeswitch.enable = true; #WLAN Stick
 
   boot = {
     kernelParams = [ "nvidia-drm.fbdev=1" ];
