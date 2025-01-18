@@ -200,6 +200,7 @@
     wineWowPackages.stable
     bind
     psmisc
+    google-chrome
     #prusa-slicer
     #jellyfin-media-player
     xow_dongle-firmware # Xbox one dongle firmware
