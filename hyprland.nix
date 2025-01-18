@@ -56,6 +56,7 @@
                     "swaync"
                     "sh ~/.config/waybar/launch.sh"
                     "systemctl --user start hyprpolkitagent"
+                    "steam -silent"
                 ];
                 windowrulev2 = [
                     #"monitor DP-3,class:.*"
