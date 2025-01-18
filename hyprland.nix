@@ -224,9 +224,7 @@
         };
         programs.rofi = {
             enable = true;
-            theme = builtins.toFile "rofi-theme.rasi" ''
-                /* ROUNDED THEME FOR ROFI */
-                /* Author: Newman Sanchez (https://github.com/newmanls) */
+            /*theme = builtins.toFile "rofi-theme.rasi" ''
                 * {
                     font:   "Roboto 12";
                     background-color:   transparent;
@@ -326,7 +324,7 @@
                 element selected {
                     text-color: @bg1;
                 }
-            '';
+            '';*/
         };
     };
 }
