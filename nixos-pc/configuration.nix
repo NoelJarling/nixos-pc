@@ -92,6 +92,16 @@
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [];
   };
+  #Sudo without password
+  security.sudo.extraRules = [
+    { users = ["noel"];
+      commands = [
+        { command = "ALL";
+          options = ["NOPASSWD"];
+        }
+      ];
+    }
+  ];
   home-manager.users.noel = { pkgs, ... }: {
     programs.alacritty = {
       enable = true;
