@@ -43,7 +43,7 @@
     # Silent Boot
     consoleLogLevel = 0;
     initrd.verbose = false;
-    plymouth.enable = true;
+    #plymouth.enable = true;
   };
 
   networking.hostName = "nixos-pc"; # Define your hostname.
