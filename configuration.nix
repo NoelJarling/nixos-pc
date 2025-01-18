@@ -32,13 +32,17 @@
   hardware.usb-modeswitch.enable = true; #WLAN Stick
 
   boot = {
-    kernelParams = [ "nvidia-drm.fbdev=1" "quiet" "splash" "rd.systemd.show_status=false" "udev.log_level=3" "udev.log_priority=3"];
-    loader.systemd-boot.enable = true;
-    loader.efi.canTouchEfiVariables = true;
+    kernelParams = [ "nvidia-drm.fbdev=1" "quiet" "splash" "rd.systemd.show_status=false" "rd.udev.log_level=3" "udev.log_priority=3" "boot.shell_on_fail" ];
+    loader = {
+      timeout = 0;
+      systemd-boot.enable = true;
+      efi.canTouchEfiVariables = true;
+    };
 
     # Silent Boot
     consoleLogLevel = 0;
     initrd.verbose = false;
+    plymouth.enable = true;
   };
 
   networking.hostName = "nixos-pc"; # Define your hostname.
