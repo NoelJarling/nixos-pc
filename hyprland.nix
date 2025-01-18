@@ -237,7 +237,15 @@
 }
 
 /*****----- Global Properties -----*****/
-//@import "~/.config/rofi/colors/onedark.rasi"
+
+* {
+    background:     #1E2127FF;
+    background-alt: #282B31FF;
+    foreground:     #FFFFFFFF;
+    selected:       #61AFEFFF;
+    active:         #98C379FF;
+    urgent:         #E06C75FF;
+}
 
 * {
     font: "JetBrains Mono Nerd Font 10";
