@@ -43,16 +43,7 @@
     # Silent Boot
     consoleLogLevel = 0;
     initrd.verbose = false;
-    plymouth = {
-      enable = true;
-      theme = "rings";
-      themePackages = with pkgs; [
-        # By default we would install all themes
-        (adi1090x-plymouth-themes.override {
-          selected_themes = [ "rings" ];
-        })
-      ];
-    };
+    plymouth.enable = true;
   };
 
   networking.hostName = "nixos-pc"; # Define your hostname.
