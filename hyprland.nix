@@ -237,8 +237,11 @@
 }
 
 /*****----- Global Properties -----*****/
-@import                          "shared/colors.rasi"
-@import                          "shared/fonts.rasi"
+@import "~/.config/rofi/colors/onedark.rasi"
+
+* {
+    font: "JetBrains Mono Nerd Font 10";
+}
 
 * {
     border-colour:               var(selected);
