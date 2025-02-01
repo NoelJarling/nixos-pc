@@ -200,9 +200,8 @@
     wineWowPackages.stable
     bind
     psmisc
-    google-chrome
     #prusa-slicer
-    #jellyfin-media-player
+    jellyfin-media-player
     xow_dongle-firmware # Xbox one dongle firmware
   ];
   environment.sessionVariables.VK_DRIVER_FILES = "/run/opengl-driver/share/vulkan/icd.d/nvidia_icd.x86_64.json";
