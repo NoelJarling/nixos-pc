@@ -233,7 +233,7 @@
     };
   };
 
-  systemd.watchdog.runtimeTime = "30s";
+  systemd.watchdog.runtimeTime = "10s";
 
   
   # Some programs need SUID wrappers, can be configured further or are
