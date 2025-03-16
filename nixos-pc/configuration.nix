@@ -234,6 +234,8 @@
   };
 
   systemd.watchdog.runtimeTime = "10s";
+  systemd.watchdog.device = "/dev/watchdog0";
+  systemd.watchdog.rebootTime = "30s";
 
   
   # Some programs need SUID wrappers, can be configured further or are
