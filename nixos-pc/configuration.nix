@@ -202,7 +202,7 @@
     psmisc
     #prusa-slicer
     jellyfin-media-player
-    xow_dongle-firmware # Xbox one dongle firmware
+    xow_dongle-firmware # Xbox one dongle firmware 
     google-chrome
   ];
   environment.sessionVariables.VK_DRIVER_FILES = "/run/opengl-driver/share/vulkan/icd.d/nvidia_icd.x86_64.json";
@@ -232,6 +232,8 @@
       safe.directory = "/etc/nixos";
     };
   };
+
+  systemd.watchdog.runtimeTime = "30s";
 
   
   # Some programs need SUID wrappers, can be configured further or are
