@@ -19,7 +19,7 @@
       modules = [
         ./configuration.nix
         ./hardware-configuration.nix
-        disko.nixosModules.disko
+        #disko.nixosModules.disko
         #inputs.home-manager.nixosModules.default
       ];
     };
