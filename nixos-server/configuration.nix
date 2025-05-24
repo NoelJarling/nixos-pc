@@ -278,6 +278,36 @@
   boot.kernelModules = ["ip_tables" "ip6_tables"];
   boot.extraModprobeConfig = "options usbcore autosuspend=-1";
 
+  virtualisation.oci-containers.containers = {
+    duplicati = {
+      image = "ghcr.io/linuxserver/duplicati:2.1.0";
+      environment = {
+        PUID = 0;
+        PGID = 0;
+        TZ = "Europe/Amsterdam";
+      };
+      volumes = [
+        "/docker-data/duplicati/config:/config"
+        "/docker-data/duplicati/backups:/backups"
+        "/docker-data:/source/docker-data"
+        "/etc/nixos/:/source/nixos"
+        "/media-data/nas:/source/nas"
+      ];
+      networks = [traefik-duplicati];
+      labels = {
+        "wud.tag.include" = "^\d+\.?\d*\.?\d*$";
+        "wud.watch" = "true";
+        "traefik.enable" = "true";
+        "traefik.http.routers.duplicati.rule" = "Host('duplicati.njarling.com')"
+        "traefik.docker.network" = "traefik-duplicati"
+        "traefik.http.routers.duplicati.middlewares" = "authentik@file"
+      };
+      ports = [
+        "8200" = "8200"
+      ];
+    };
+  };
+
   virtualisation.docker.enable = true;
 
   # This value determines the NixOS release from which the default
