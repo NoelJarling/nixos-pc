@@ -17,10 +17,9 @@
   boot.loader.systemd-boot.graceful = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  #systemd.watchdog.device = "/dev/watchdog";
-  #systemd.watchdog.runtimeTime = "60s";
-  #systemd.watchdog.rebootTime = "1min";
-  #services.watchdogd.enable = true;
+  systemd.watchdog.device = "/dev/watchdog";
+  systemd.watchdog.runtimeTime = "30s";
+  services.watchdogd.enable = true;
 
   networking.hostName = "nixos-server"; # Define your hostname.
   networking.networkmanager.enable = true;
@@ -205,6 +204,20 @@
         d = {
           group = "root";
           user = "root";
+          mode = "0755";
+        };
+      };
+      "/media-data/paperless" = {
+        d = {
+          group = "paperless";
+          user = "paperless";
+          mode = "0755";
+        };
+      };
+      "/media-data/paperlesss/documents" = {
+        d = {
+          group = "paperless";
+          user = "paperless";
           mode = "0755";
         };
       };

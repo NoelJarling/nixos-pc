@@ -172,15 +172,6 @@
 
     in ["${automount_opts},credentials=/etc/nixos/nixos-pc/secrets/smb-secrets,uid=1000,gid=100"];
   };
-  fileSystems."/mnt/share/nixos" = {
-    device = "//10.213.186.204/nixos";
-    fsType = "cifs";
-    options = let
-      # this line prevents hanging on network split
-      automount_opts = "x-systemd.automount,noauto,x-systemd.idle-timeout=60,x-systemd.device-timeout=5s,x-systemd.mount-timeout=5s,user,users";
-
-    in ["${automount_opts},credentials=/etc/nixos/nixos-pc/secrets/smb-secrets,uid=1000,gid=100,rw"];
-  };
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
