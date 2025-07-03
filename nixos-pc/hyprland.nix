@@ -139,94 +139,10 @@
         };
         home.file = {
             ".config/waybar" = {
-                source = config.lib.file.mkOutOfStoreSymlink "/etc/nixos/nixos-pc/waybar";
+                source = config.lib.file.mkOutOfStoreSymlink "/etc/nixos/nixos-pc/config/waybar";
             };
         };
-        programs.waybar = {
-            enable = true;
-            /*settings = {
-                mainBar = {
-                    layer = "top";
-                    margin-bottom = 0;
-                    margin-top = 0;
-                    margin-left = 0;
-                    margin-right = 0;
-                    spacing = 0;
-                    modules-left = [
-                        "wlr/taskbar"
-                    ];
-                    modules-center = [
-                        "hyprland/workspaces"
-                    ];
-                    modules-right = [
-                        "group/hardware"
-                        "network"
-                        "wireplumber"
-                        "bluetooth"
-                        "tray"
-                        "clock"
-                    ];
-                    "hyprland/workspaces" = {
-                        on-click = "activate";
-                        active-only = false;
-                        all-outputs = true;
-                        special-visible-only = true;
-                        format-icons = {
-                            urgent = "";
-                            active = "";
-                            default = "";
-                        };
-                    };
-                    cpu = {
-                        format = " {usage}%";
-                    };
-                    memory = {
-                        format = " {used} GiB";
-                    };
-                    disk = {
-                        interval = 60;
-                        path = "/";
-                        format = " {free}";
-                    };
-                    "group/hardware" = {
-                        orientation = "horizontal";
-                        modules = ["cpu" "memory" "disk"];
-                    };
-                    network = {
-                        format-ethernet = " {ipaddr}";
-                        format-wifi = " {ipaddr}";
-                        format-disconnected = "Not connected";
-                        tooltip-format-ethernet = "  {ifname} ({ipaddr}/{cidr})";
-                        max-length = 50;
-                    };
-                    wireplumber = {
-                        format = " {volume}%";
-                        scroll-step = 5;
-                        on-click = "pavucontrol";
-                    };
-                    bluetooth = {
-                        format = " {device_alias}";
-                        format-disabled = "";
-                        format-off = "";
-                        format-no-controller = "";
-                        interval = 30;
-                        on-click = "bluetoothctl connect CC:08:FA:CB:9D:0A"; #Airpods
-                    };
-                    tray = {
-                        spacing = 10;
-                    };
-                    clock = {
-                        format = "{:%H:%M %a}";
-                        tooltip = false;
-                    };
-                };
-            };
-            style = ./waybar/style.css;*/
-        };
-        /*home.file.waybar-launch = {
-            source = ./waybar/launch.sh;
-            target = "./.config/waybar/launch.sh";
-        };*/
+        programs.waybar.enable = true;
         programs.rofi = {
             enable = true;
             theme = builtins.toFile "rofi-theme.rasi" ''
