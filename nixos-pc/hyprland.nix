@@ -26,10 +26,11 @@
     xdg.portal.enable = true;
     xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
 
+    home-manager.backupFileExtension = "backup";
     home-manager.users.noel = { config, pkgs, ... }: {
         wayland.windowManager.hyprland = {
             enable = true;
-            settings = {
+            /*settings = {
                 "$mainMod" = "SUPER";
                 bind = [
                     "$mainMod, BackSpace, exec, alacritty"
@@ -135,13 +136,19 @@
                     "QT_QPA_PLATFORM,wayland"
                     "QT_QPA_PLATFORMTHEME,qt5ct"
                 ];
-            };
+            };*/
         };
         home.file = {
             ".config/waybar" = {
                 source = config.lib.file.mkOutOfStoreSymlink "/etc/nixos/nixos-pc/config/waybar";
             };
         };
+        /*home.file = {
+            ".config/hypr" = {
+                recursive = true;
+                source = config.lib.file.mkOutOfStoreSymlink "/etc/nixos/nixos-pc/config/hypr";
+            };
+        };*/
         programs.waybar.enable = true;
         programs.rofi = {
             enable = true;
