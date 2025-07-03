@@ -26,7 +26,7 @@
     xdg.portal.enable = true;
     xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
 
-    home-manager.users.noel = { pkgs, ... }: {
+    home-manager.users.noel = { config, pkgs, ... }: {
         wayland.windowManager.hyprland = {
             enable = true;
             settings = {
@@ -137,9 +137,14 @@
                 ];
             };
         };
+        home.file = {
+            ".config/waybar" = {
+                source = config.lib.file.mkOutOfStoreSymlink "/etc/nixos/nixos-pc/waybar";
+            };
+        };
         programs.waybar = {
             enable = true;
-            settings = {
+            /*settings = {
                 mainBar = {
                     layer = "top";
                     margin-bottom = 0;
@@ -149,7 +154,6 @@
                     spacing = 0;
                     modules-left = [
                         "wlr/taskbar"
-                        "hyprland/window"
                     ];
                     modules-center = [
                         "hyprland/workspaces"
@@ -217,12 +221,12 @@
                     };
                 };
             };
-            style = ./waybar/style.css;
+            style = ./waybar/style.css;*/
         };
-        home.file.waybar-launch = {
+        /*home.file.waybar-launch = {
             source = ./waybar/launch.sh;
             target = "./.config/waybar/launch.sh";
-        };
+        };*/
         programs.rofi = {
             enable = true;
             theme = builtins.toFile "rofi-theme.rasi" ''
