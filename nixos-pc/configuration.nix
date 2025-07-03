@@ -116,13 +116,13 @@
       "rebuild-nix"="bash /etc/nixos/scripts/nixos-rebuild.sh";
       "push-nix"="bash /etc/nixos/scripts/nixos-push.sh";
     };
-    programs.zsh = {
+    /*programs.zsh = {
       enable = true;
       autosuggestion = {
         enable = true;
         #highlight = "fg=#ff00ff,bg=cyan,bold,underline";
       };
-    };
+    };*/
     programs.git = {
       enable = true;
       userName = "NoelTheGnom";
