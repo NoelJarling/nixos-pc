@@ -108,6 +108,9 @@
           recursive = true;
           source = config.lib.file.mkOutOfStoreSymlink "/etc/nixos/nixos-pc/config/alacritty";
       };
+      ".p10k.zsh" = {
+          source = config.lib.file.mkOutOfStoreSymlink "/etc/nixos/nixos-pc/config/p10k/p10k.zsh";
+      };
     };
     home.shellAliases = {
       "rebuild-nix"="bash /etc/nixos/scripts/nixos-rebuild.sh";
@@ -119,10 +122,6 @@
         enable = true;
         #highlight = "fg=#ff00ff,bg=cyan,bold,underline";
       };
-    };
-    home.file.p10k_config = {
-      source = ./p10k/p10k.zsh;
-      target = "./.p10k.zsh";
     };
     programs.git = {
       enable = true;
