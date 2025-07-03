@@ -1,0 +1,11 @@
+general.import = [
+    "~/.config/alacritty/themes/macchiato.toml"
+]
+
+[window]
+blur = true
+opacity = 1
+
+[window.padding]
+x = 10
+y = 10
