@@ -111,18 +111,14 @@
       ".p10k.zsh" = {
           source = config.lib.file.mkOutOfStoreSymlink "/etc/nixos/nixos-pc/config/p10k/p10k.zsh";
       };
+      ".zshrc" = {
+          source = config.lib.file.mkOutOfStoreSymlink "/etc/nixos/nixos-pc/config/zsh/zshrc";
+      };
     };
     home.shellAliases = {
       "rebuild-nix"="bash /etc/nixos/scripts/nixos-rebuild.sh";
       "push-nix"="bash /etc/nixos/scripts/nixos-push.sh";
     };
-    /*programs.zsh = {
-      enable = true;
-      autosuggestion = {
-        enable = true;
-        #highlight = "fg=#ff00ff,bg=cyan,bold,underline";
-      };
-    };*/
     programs.git = {
       enable = true;
       userName = "NoelTheGnom";
