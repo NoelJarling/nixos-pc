@@ -195,6 +195,7 @@
     jellyfin-media-player
     xow_dongle-firmware # Xbox one dongle firmware 
     google-chrome
+    hyprpaper
   ];
   environment.sessionVariables.VK_DRIVER_FILES = "/run/opengl-driver/share/vulkan/icd.d/nvidia_icd.x86_64.json";
   fonts.packages = with pkgs; [

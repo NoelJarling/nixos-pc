@@ -18,12 +18,11 @@
   ],
   "modules-right": [
     "pulseaudio",
-    "bluetooth",,,
+    "bluetooth",
     "clock",
     "separator",
     "tray"
   ],
-
 
   "tray": {
     "icon-size": 16,
@@ -31,7 +30,7 @@
     "spacing": 2
   },
    "custom/spacer": {
-        "format": " ", // Empty space
+        "format": " ",
         "tooltip": false
   },
   "separator": {
@@ -130,7 +129,7 @@
   },
   "disk":{
 	"interval": 3,
-  "path": "/home",
+  "path": "/",
 	"format": "<span color='#a6e3a1'> </span><span color='#cdd6f4'>{free}</span>",
 	"unit": "GB"
   }
