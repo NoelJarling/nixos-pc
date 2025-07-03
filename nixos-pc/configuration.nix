@@ -102,18 +102,11 @@
       ];
     }
   ];
-  home-manager.users.noel = { pkgs, ... }: {
-    programs.alacritty = {
-      enable = true;
-      settings = {
-        window = {
-          padding = {
-            x = 10;
-            y = 10;
-          };
-          opacity = 0.5;
-          blur = true;
-        };
+  home-manager.users.noel = { config, pkgs, ... }: {
+    home.file = {
+      ".config/alacritty" = {
+          recursive = true;
+          source = config.lib.file.mkOutOfStoreSymlink "/etc/nixos/nixos-pc/config/alacritty";
       };
     };
     home.shellAliases = {
