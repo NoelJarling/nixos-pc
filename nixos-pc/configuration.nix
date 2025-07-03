@@ -122,6 +122,7 @@
         enable = true;
         #highlight = "fg=#ff00ff,bg=cyan,bold,underline";
       };
+      initExtra = "POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true";
     };
     programs.git = {
       enable = true;
