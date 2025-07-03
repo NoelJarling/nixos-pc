@@ -11,18 +11,26 @@
   "modules-left": [
     "cpu",
     "memory",
-    "disk",
+    "disk"
   ],
   "modules-center": [
-    "hyprland/workspaces"
+    "wlr/taskbar"
   ],
   "modules-right": [
+    "cava",
     "pulseaudio",
     "bluetooth",
-    "clock",
+    "clock#time",
+    "clock#calendar",
     "separator",
     "tray"
   ],
+
+  "wlr/taskbar":{
+    "icon-size": 14,
+    "icon-theme": "Papirus",
+    "spacing" : 2
+  },
 
   "tray": {
     "icon-size": 16,
@@ -70,23 +78,27 @@
       "DP-1": 9
     }
   },
-  "clock": {
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "format": "<span color='#89b4fa'>󰥔 </span><span color='#cdd6f4'>{:%H:%M | %a %d %b}</span>",
-    "format-alt": "{:%Y-%m-%d}"
+  "clock#time": {
+    "format": " {:%H:%M}"
+  },
+  "clock#calendar": {
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "format": " {%a %d %b}"
   },
 
   "cpu": {
-    "format": "<span color='#89b4fa'>󰍛</span> <span color='#cdd6f4'>{usage}%</span>",
-    "interval": 1,
-    "format-alt-click": "click",
-    "format-alt": "<span color='#00FF00'>{icon0}{icon1}{icon2}{icon3}</span> <span color='#FFFFFF'>{usage:>2}%</span> <span color='#00FF00'>󰍛</span>",
-    "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
-    "on-click": "gnome-system-monitor"
+    "format": " {usage}%",
+    "interval": 3
   },
   "memory": {
     "interval": 3,
-    "format": "<span color='#f38ba8'> </span> <span color='#cdd6f4'>{used:0.1f}G</span>"
+    "format": " {used:0.1f}G"
+  },
+  "disk":{
+	"interval": 3,
+  "path": "/",
+	"format": " {free}",
+	"unit": "GB"
   },
    
   "bluetooth": {
@@ -97,14 +109,13 @@
     "interval": 30,
     "on-click": "bluetoothctl connect CC:08:FA:CB:9D:0A"
   },
+  
   "pulseaudio": {
     "format": "<span color='#a6e3a1'>{icon} </span><span color='#cdd6f4'>{volume}%</span>",
-    "format-bluetooth": "<span color='#a6e3a1'>{icon}</span>  <span color='#cdd6f4'>{volume}%</span>",
+    "format-bluetooth": "<span color='#a6e3a1'>{icon} </span>  <span color='#cdd6f4'>{volume}%</span>",
     "tooltip": false,
-    "format-muted": "<span color='#f38ba8'>󰝟</span>",
-    "on-click": "wpctl set-mute @DEFAULT_SINK@ toggle",
-    "on-scroll-up": "wpctl set-volume @DEFAULT_SINK@ 10%+",
-    "on-scroll-down": "wpctl set-volume @DEFAULT_SINK@ 10%-",
+    "on-scroll-up": "wpctl set-volume @DEFAULT_SINK@ 5%+",
+    "on-scroll-down": "wpctl set-volume @DEFAULT_SINK@ 5%-",
     "format-icons": {
       "headphone": "",
       "hands-free": "",
@@ -126,11 +137,5 @@
     "on-click": "wpctl set-mute @DEFAULT_SOURCE@ toggle",
     "on-scroll-up": "wpctl set-volume @DEFAULT_SOURCE@ 5%+",
     "on-scroll-down": "wpctl set-volume @DEFAULT_SOURCE@ 5%-",
-  },
-  "disk":{
-	"interval": 3,
-  "path": "/",
-	"format": "<span color='#a6e3a1'> </span><span color='#cdd6f4'>{free}</span>",
-	"unit": "GB"
   }
 }

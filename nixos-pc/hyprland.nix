@@ -8,6 +8,8 @@
         hyprpolkitagent
         pavucontrol
         hyprland
+        hyprpaper
+        cava
     ];
     fonts.packages = with pkgs; [
         font-awesome
@@ -28,116 +30,6 @@
 
     home-manager.backupFileExtension = "backup";
     home-manager.users.noel = { config, pkgs, ... }: {
-        #wayland.windowManager.hyprland = {
-            #enable = true;
-            /*settings = {
-                "$mainMod" = "SUPER";
-                bind = [
-                    "$mainMod, BackSpace, exec, alacritty"
-                    "$mainMod, C, killactive,"
-                    "$mainMod, F, fullscreen, 0"
-                    "$mainMod, E, exec, nautilus"
-                    "$mainMod, X, movetoworkspace, 2"
-                    "$mainMod, Y, movetoworkspace, 1"
-                    "$mainMod, V, layoutmsg, swapwithmaster"
-                    "$mainMod, SPACE, exec, rofi -show drun -show-icons"
-                    "$mainMod, M, exec, sh ~/.config/waybar/launch.sh"
-                    "$mainMod, j, movefocus, l"
-                    "$mainMod, l, movefocus, r"
-                    "$mainMod, i, movefocus, u"
-                    "$mainMod, k, movefocus, d"
-                    "$mainMod ALT, j, movewindow, l"
-                    "$mainMod ALT, l, movewindow, r"
-                    "$mainMod ALT, i, movewindow, u"
-                    "$mainMod ALT, k, movewindow, d"
-                    ", code:123, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
-                    ", code:122, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
-                ];
-                exec-once = [
-                    "swaync"
-                    "sh ~/.config/waybar/launch.sh"
-                    "systemctl --user start hyprpolkitagent"
-                    "steam -silent"
-                ];
-                windowrulev2 = [
-                    #"monitor DP-3,class:.*"
-                    #"monitor DP-2,class:(steam)"
-                    "monitor DP-2,class:(firefox)"
-                    "monitor DP-2,class:(Rofi)"
-                    "monitor DP-3,class:War Thunder \(Vulkan, 64bit\)"
-                    "fullscreen,class:(War Thunder \(Vulkan, 64bit\))"
-                    "suppressevent maximize, class:.*"
-                ];
-                workspace = [
-                    "2, persistent:true,monitor:DP-2,default:true,layoutopt:orientation:left"
-                    "1, persistent:true,monitor:DP-3,default:true,layoutopt:orientation:right"
-                ];
-                general = {
-                    gaps_in = 5;
-                    gaps_out = 10;
-                    border_size = 2;
-                    "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
-                    "col.inactive_border" = "rgba(595959aa)";
-                    resize_on_border = false;
-                    allow_tearing = true;
-                    layout = "master";
-                };
-                master = {
-                    new_status = "master";
-                    mfact = 0.66;
-                    orientation = "left";
-                };
-                input = {
-                    kb_layout = "de";
-                    follow_mouse = 1;
-                    sensitivity = "-0.8";
-                };
-                decoration = {
-                    rounding = 10;
-                    active_opacity = 1.0;
-                    inactive_opacity = 1.0;
-                    shadow = {
-                        range = 4;
-                        render_power = 3;
-                        color = "rgba(1a1a1aee)";
-                    };
-                    blur = {
-                        enabled = true;
-                        size = 3;
-                        passes = 1;
-                        vibrancy = 0.1696;
-                    };
-                };
-                animations = {
-                    enabled = true;
-                    bezier = "myBezier, 0.05, 0.9, 0.1, 1.05";
-                    animation = [
-                        "windows, 1, 7, myBezier"
-                        "windowsOut, 1, 7, default, popin 80%"
-                        "border, 1, 10, default"
-                        "borderangle, 1, 8, default"
-                        "fade, 1, 7, default"
-                        "workspaces, 1, 6, default"
-                    ];
-                };
-                misc = {
-                    force_default_wallpaper = 1;
-                    disable_hyprland_logo = false;
-                };
-                monitor = [
-                    "DP-2, 2560x1440,1920x0, 1"
-                    "DP-3,1920x1080, 0x200, 1"
-                    "HDMI-A-1, disable"
-                ];
-                env = [
-                    "XCURSOR_SIZE,24"
-                    "ELECTRON_OZONE_PLATFORM_HINT,auto"
-                    "HYPRCURSOR_SIZE,24"
-                    "QT_QPA_PLATFORM,wayland"
-                    "QT_QPA_PLATFORMTHEME,qt5ct"
-                ];
-            };*/
-        #};
         home.file = {
             ".config/waybar" = {
                 source = config.lib.file.mkOutOfStoreSymlink "/etc/nixos/nixos-pc/config/waybar";
