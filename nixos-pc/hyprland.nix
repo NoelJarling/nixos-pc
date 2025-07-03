@@ -28,8 +28,8 @@
 
     home-manager.backupFileExtension = "backup";
     home-manager.users.noel = { config, pkgs, ... }: {
-        wayland.windowManager.hyprland = {
-            enable = true;
+        #wayland.windowManager.hyprland = {
+            #enable = true;
             /*settings = {
                 "$mainMod" = "SUPER";
                 bind = [
@@ -137,18 +137,16 @@
                     "QT_QPA_PLATFORMTHEME,qt5ct"
                 ];
             };*/
-        };
+        #};
         home.file = {
             ".config/waybar" = {
                 source = config.lib.file.mkOutOfStoreSymlink "/etc/nixos/nixos-pc/config/waybar";
             };
-        };
-        /*home.file = {
             ".config/hypr" = {
                 recursive = true;
                 source = config.lib.file.mkOutOfStoreSymlink "/etc/nixos/nixos-pc/config/hypr";
             };
-        };*/
+        };
         programs.waybar.enable = true;
         programs.rofi = {
             enable = true;
