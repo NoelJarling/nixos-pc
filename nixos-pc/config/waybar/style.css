@@ -85,8 +85,16 @@ tooltip {
     color: @blue;
 }
 #bluetooth:hover,
-#custom-power:hover,
-#tray > *:hover{
+#custom-power:hover{
+    background-color: @surface1;
+}
+
+#taskbar button:hover{
+    transition: none;
+    animation: none;
+}
+
+#taskbar button.active{
     background-color: @surface1;
 }
 

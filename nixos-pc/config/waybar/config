@@ -7,7 +7,6 @@
   "margin-top": 10,
   "margin-left": 10,
   "margin-right": 10,
-  /*"height": 41,*/
   "modules-left": [
     "network#down",
     "cpu",
@@ -61,7 +60,8 @@
         "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ]
     },
   "clock#time": {
-    "format": " {:%H:%M}"
+    "format": " {:%H:%M}",
+    "tooltip": false
   },
   "clock#calendar": {
     "tooltip-format": "<tt><small>{calendar}</small></tt>",
