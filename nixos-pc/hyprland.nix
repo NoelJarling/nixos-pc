@@ -31,6 +31,12 @@
 
     home-manager.backupFileExtension = "backup";
     home-manager.users.noel = { config, pkgs, ... }: {
+        gtk = {
+            enable = true;
+            cursorTheme = {
+                name = "breezeXdark-xcursor";
+            };
+        };
         home.file = {
             ".config/hypr" = {
                 recursive = true;
