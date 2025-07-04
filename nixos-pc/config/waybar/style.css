@@ -27,8 +27,12 @@ tooltip {
 }
 
 .module{
-    padding-right: 10px;
-    padding-left: 10px;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-left: 2px;
+    margin-right: 2px;
+    min-height: 0;
+    border-radius: 30px;
 }
 
 .modules-left,
@@ -39,8 +43,7 @@ tooltip {
     opacity: 1.0;
     margin-top: 5px;
     margin-bottom: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 10px;
     min-height: 32px;
 }
 
@@ -79,20 +82,28 @@ tooltip {
 }
 
 #bluetooth {
-  color: @blue;
-} 
+    color: @blue;
+}
+#bluetooth:hover,
+#custom-power:hover,
+#tray > *:hover{
+    background-color: @surface1;
+}
 
 #pulseaudio {
-  color: @red;
+    color: @red;
+}
+
+#custom-power{
+    color: @red
 }
 
 menu {
     background-color: @base;
     color: @text;
     border-radius: 13px;
-    border: 1px solid @blue;
+    border: 2px solid @blue;
     padding: 10px;
-    margin: 0;
 }
 
 menuitem {

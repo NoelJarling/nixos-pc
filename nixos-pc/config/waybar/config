@@ -7,7 +7,7 @@
   "margin-top": 10,
   "margin-left": 10,
   "margin-right": 10,
-  "height": 41,
+  /*"height": 41,*/
   "modules-left": [
     "network#down",
     "cpu",
@@ -35,13 +35,9 @@
   },
 
   "tray": {
-    "icon-size": 16,
+    "icon-size": 14,
     "icon-theme": "Papirus",
     "spacing": 2
-  },
-   "custom/spacer": {
-        "format": " ",
-        "tooltip": false
   },
 
   "cava": {
@@ -109,7 +105,7 @@
     "format-connected": " {device_alias}",
     "format-off": " off",
     "interval": 30,
-    "on-click": "bluetoothctl connect CC:08:FA:CB:9D:0A"
+    "on-click": "sh ~/.config/waybar/bluetooth.sh"
   },
   
   "pulseaudio": {
