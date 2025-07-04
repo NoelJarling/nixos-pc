@@ -9,6 +9,7 @@
         pavucontrol
         hyprland
         hyprpaper
+        hyprcursor
         cava
     ];
     fonts.packages = with pkgs; [
