@@ -44,6 +44,10 @@
                 recursive = true;
                 source = config.lib.file.mkOutOfStoreSymlink "/etc/nixos/nixos-pc/config/rofi";
             };
+            ".icons" = {
+                recursive = true;
+                source = config.lib.file.mkOutOfStoreSymlink "/etc/nixos/nixos-pc/config/cursors";
+            };
         };
     };
 }
