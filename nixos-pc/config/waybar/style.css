@@ -35,7 +35,7 @@ tooltip {
 .modules-center,
 .modules-right{
     border-radius: 13px;
-    background: @base;
+    background-color: @base;
     opacity: 1.0;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -84,6 +84,22 @@ tooltip {
 
 #pulseaudio {
   color: @red;
+}
+
+menu {
+    background-color: @base;
+    color: @text;
+    border-radius: 13px;
+    border: 1px solid @blue;
+    padding: 10px;
+    margin: 0;
+}
+
+menuitem {
+    border-radius: 13px;
+    border: 1px solid @overlay0;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 
