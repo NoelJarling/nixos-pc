@@ -122,7 +122,7 @@
         enable = true;
         #highlight = "fg=#ff00ff,bg=cyan,bold,underline";
       };
-      initExtra = "source ~/.p10k.zsh";
+      initContent = "source ~/.p10k.zsh";
     };
     programs.git = {
       enable = true;
@@ -189,6 +189,7 @@
     xow_dongle-firmware # Xbox one dongle firmware 
     google-chrome
     gimp
+    grayjay
   ];
   environment.sessionVariables.VK_DRIVER_FILES = "/run/opengl-driver/share/vulkan/icd.d/nvidia_icd.x86_64.json";
   fonts.packages = with pkgs; [
