@@ -30,7 +30,8 @@
   "wlr/taskbar":{
     "icon-size": 14,
     "icon-theme": "Papirus",
-    "spacing" : 2
+    "spacing" : 2,
+    "all-outputs": true
   },
 
   "tray": {

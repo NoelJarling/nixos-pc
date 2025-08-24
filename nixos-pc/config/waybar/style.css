@@ -80,6 +80,9 @@ tooltip {
 #network.down{
     color: @peach;
 }
+#pulseaudio {
+    color: @red;
+}
 
 #bluetooth {
     color: @blue;
@@ -96,10 +99,6 @@ tooltip {
 
 #taskbar button.active{
     background-color: @surface1;
-}
-
-#pulseaudio {
-    color: @red;
 }
 
 #custom-power{
