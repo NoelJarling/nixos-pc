@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, pkgs-unstable, lib, inputs, ... }:
+{ config, pkgs, lib, inputs, ... }:
 
 {
   imports = [ # Include the results of the hardware scan.
@@ -10,7 +10,18 @@
     #./plasma6.nix
     ./hyprland.nix
     inputs.home-manager.nixosModules.default
-  ];  
+  ];
+
+  nixpkgs.overlays = [
+    (final: _: {
+      # this allows you to access `pkgs.unstable` anywhere in your config
+      unstable = import inputs.nixpkgs-unstable {
+        inherit (final.stdenv.hostPlatform) system;
+        inherit (final) config;
+      };
+    })
+  ];
+
   
   # Nvidia
   hardware.graphics.enable = true;
@@ -189,7 +200,7 @@
     xow_dongle-firmware # Xbox one dongle firmware 
     google-chrome
     gimp
-    
+    unstable.grayjay
   ];
   environment.sessionVariables.VK_DRIVER_FILES = "/run/opengl-driver/share/vulkan/icd.d/nvidia_icd.x86_64.json";
   fonts.packages = with pkgs; [
